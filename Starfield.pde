@@ -43,11 +43,11 @@ class Particle
 class OddballParticle extends Particle
 {
   OddballParticle() {
-    mySpeed = (Math.random()*1); 
-    c = color(255,255,255); 
+    mySpeed = Math.random(); //isn't redundant because I need to change mySpeed to make OddballParticle slower
+    c = color(255,255,255);  //isn't redundant because I want OddballParticle to be white
   }
   void show() {
-    fill(c); 
-    ellipse((int)myX+(int)(Math.random()*33)-16,(int)myY+(int)(Math.random()*33)-16,45,45);
+    fill(c); //isn't redundant because I want OddballParticle to be white
+    ellipse((int)myX+(int)(Math.random()*33)-16,(int)myY+(int)(Math.random()*33)-16,45,45); //isn't redundant because I want OddballParticle to shake chaotically
   }
 }
